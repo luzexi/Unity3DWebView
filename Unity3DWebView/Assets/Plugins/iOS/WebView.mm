@@ -93,7 +93,7 @@ extern UIViewController *UnityGetGLViewController();
     
 }
 
-- (void)setMargins:(int)x top:(int)y right:(int)width bottom:(int)height
+- (void)setMargins:(int)x y:(int)y width:(int)width height:(int)height
 {
 	UIView *view = UnityGetGLViewController().view;
     
@@ -151,10 +151,10 @@ void _WebViewPlugin_Destroy(void *instance)
 }
 
 void _WebViewPlugin_SetMargins(
-                               void *instance, int left, int top, int right, int bottom)
+                               void *instance, int x, int y, int width, int height)
 {
 	WebViewPlugin *webViewPlugin = (WebViewPlugin *)instance;
-	[webViewPlugin setMargins:left top:top right:right bottom:bottom];
+	[webViewPlugin setMargins:x y:y width:width height:height];
 }
 
 void _WebViewPlugin_SetVisibility(void *instance, BOOL visibility)
