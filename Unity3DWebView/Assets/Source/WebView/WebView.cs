@@ -6,11 +6,34 @@ using System.Runtime.InteropServices;
 
 using Kogarasi.WebView;
 
-public class WebViewBehavior : MonoBehaviour
-{
 
-	IWebView			webView;
-	IWebViewCallback	callback;
+//	WebView.cs
+//	Author: Lu Zexi
+//	2014-07-17
+
+
+/// <summary>
+/// Web view.
+/// </summary>
+public class WebView : MonoBehaviour
+{
+	private static WebView s_cInstance;
+	public static WebView cInstance
+	{
+		get
+		{
+			if(s_cInstance == null)
+			{
+				GameObject obj = new GameObject("WebView");
+				s_cInstance = obj.AddComponent<WebView>();
+			}
+			return s_cInstance;
+		}
+	}
+
+
+	private IWebView webView;
+	private IWebViewCallback	callback = null;
 
 #region Method
 
@@ -26,22 +49,6 @@ public class WebViewBehavior : MonoBehaviour
 #endif
 
 		webView.Init( name );
-
-		callback = null;
-	}
-
-	void OnGUI()
-	{
-		if(GUI.Button( new Rect(0,0,100,30) , "start"))
-		{
-			this.webView.LoadURL("http://www.luzexi.com");
-			this.webView.SetVisibility(true);
-			this.webView.SetMargins(0,0,640,960);
-		}
-		if(GUI.Button(new Rect(0,30,100,30),"close"))
-		{
-			this.webView.SetVisibility(false);
-		}
 	}
 
 	public void OnDestroy()
@@ -49,10 +56,11 @@ public class WebViewBehavior : MonoBehaviour
 		webView.Term();
 	}
 
-	public void SetMargins( int left, int top, int right, int bottom )
+	public void SetMargins( int x, int y, int width, int height )
 	{
-		webView.SetMargins( left, top, right, bottom );
+		webView.SetMargins( x, y, width, height );
 	}
+
 	public void SetVisibility( bool state )
 	{
 		webView.SetVisibility( state );

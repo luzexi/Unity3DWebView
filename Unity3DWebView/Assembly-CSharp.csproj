@@ -46,7 +46,8 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Source\Test\WebViewBehavior.cs" />
+     <Compile Include="Assets\Source\Test\TestView.cs" />
+     <Compile Include="Assets\Source\WebView\WebView.cs" />
      <Compile Include="Assets\Source\WebView\WebViewAndroidInterface.cs" />
      <Compile Include="Assets\Source\WebView\WebViewIOSInterface.cs" />
      <Compile Include="Assets\Source\WebView\WebViewInterface.cs" />
