@@ -1,13 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Source/WebView/WebViewBehavior.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Source/WebView/WebViewAndroidInterface.cs">
     <Files>
-      <File FileName="Assets/Source/WebView/WebViewIOSInterface.cs" Line="46" Column="71" />
+      <File FileName="Assets/Source/WebView/WebViewIOSInterface.cs" Line="17" Column="3" />
       <File FileName="Assets/Source/WebView/WebViewNullInterface.cs" Line="1" Column="1" />
-      <File FileName="Assets/Source/WebView/WebViewBehavior.cs" Line="25" Column="31" />
       <File FileName="Assets/Source/WebView/WebViewInterface.cs" Line="9" Column="9" />
       <File FileName="Assets/Source/WebView/WebViewAndroidInterface.cs" Line="1" Column="1" />
-      <File FileName="../../../../../linbingdouzheClient/Assets/Scripts/Source/GUI/GUIAnnouncement/GUIAnnouncement.cs" Line="109" Column="19" />
+      <File FileName="../../../../../linbingdouzheClient/Assets/Scripts/Source/GUI/GUIAnnouncement/GUIAnnouncement.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -15,7 +14,7 @@
           <Node name="Assembly-CSharp" expanded="True">
             <Node name="Source" expanded="True">
               <Node name="WebView" expanded="True">
-                <Node name="WebViewBehavior.cs" selected="True" />
+                <Node name="WebViewAndroidInterface.cs" selected="True" />
               </Node>
             </Node>
           </Node>
