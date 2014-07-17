@@ -52,9 +52,6 @@
      <Compile Include="Assets\Source\WebView\WebViewInterface.cs" />
      <Compile Include="Assets\Source\WebView\WebViewNullInterface.cs" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
-     <None Include="Assets\Source\Android\source\res\layout\main.xml" />
-     <None Include="Assets\Source\Android\source\res\values\strings.xml" />
-     <None Include="Assets\Source\Android\source\AndroidManifest.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
