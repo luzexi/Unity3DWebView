@@ -37,7 +37,7 @@ public class WebView : MonoBehaviour
 
 #region Method
 
-	public void Awake()
+	void Awake()
 	{
 
 #if UNITY_ANDROID
@@ -51,8 +51,9 @@ public class WebView : MonoBehaviour
 		webView.Init( name );
 	}
 
-	public void OnDestroy()
+	void OnDestroy()
 	{
+		s_cInstance = null;
 		webView.Term();
 	}
 
