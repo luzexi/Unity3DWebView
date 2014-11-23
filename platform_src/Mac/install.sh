@@ -1,5 +1,5 @@
 #!/bin/sh
-DSTDIR="../../Plugins/Mac/"
+DSTDIR="./"
 rm -rf DerivedData
 xcodebuild -scheme WebView -configuration Release build CONFIGURATION_BUILD_DIR='DerivedData'
 mkdir -p $DSTDIR
