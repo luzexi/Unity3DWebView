@@ -41,6 +41,20 @@ public class UnitySendMessageDispatcher
 
 public class WebViewObject : MonoBehaviour
 {
+	private static WebViewObject s_mInstance;
+	public static WebViewObject sInstance
+	{
+		get
+		{
+			if(s_mInstance == null)
+			{
+				GameObject obj = new GameObject("webView");
+				s_mInstance = obj.AddComponent<WebViewObject>();
+			}
+			return s_mInstance;
+		}
+	}
+
 	Callback callback;
 #if UNITY_EDITOR || UNITY_STANDALONE_OSX
 	IntPtr webView;
@@ -165,6 +179,7 @@ public class WebViewObject : MonoBehaviour
 #elif UNITY_WEBPLAYER
 		Application.ExternalCall("unityWebView.destroy", name);
 #endif
+		s_mInstance = null;
 	}
 
     /** Use this function instead of SetMargins to easily set up a centered window */
